@@ -28,4 +28,4 @@
     become_user: charlie 
     dconf:
       key: "/org/gnome/desktop/background/picture-options"
-      value: "'zoom'"
+      value: "'stretch'"
