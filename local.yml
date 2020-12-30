@@ -38,8 +38,9 @@
       group: charlie
 
   - name: add ansible user
-    user: higgins
-    system: yes
+    user: 
+      name: higgins
+      system: yes
 
   - name: set up sudo for ansible user
     copy:
