@@ -29,3 +29,32 @@
     dconf:
       key: "/org/gnome/desktop/background/picture-options"
       value: "'stretch'"
+
+  - name: copy .bashrc file
+    copy:
+      src: files/bashrc
+      dest: /home/charlie/.bashrc
+      owner: charlie
+      group: charlie
+
+  - name: add ansible user
+    user: higgins
+    system: yes
+
+  - name: set up sudo for ansible user
+    copy:
+      src: files/sudoer_higgins
+      dest: /etc/sudoers.d/higgins
+      owner: root
+      group: root
+      mode: 0440
+
+  - name: add ansible cron job
+    cron:
+      name: ansible auto-provision
+      user: higgins
+      minute: "*/10"
+      job: ansible-pull -o -U https://github.com/KimcheeGI/ansible-desktop.git 
+
+
+    
