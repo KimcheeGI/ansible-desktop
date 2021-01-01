@@ -50,7 +50,7 @@
       group: root
       mode: 0440
 
-  - name: add ansible cron job
+  - name: add ansible-pull cron job
     cron:
       name: ansible auto-provision
       user: higgins
