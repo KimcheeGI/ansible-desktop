@@ -56,7 +56,4 @@
       name: ansible auto-provision
       user: higgins
       minute: "*/10"
-      job: ansible-pull -o -U https://github.com/KimcheeGI/ansible-desktop.git 
-
-
-    
+      job: ansible-pull -o -U https://github.com/KimcheeGI/ansible-desktop.git
