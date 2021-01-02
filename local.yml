@@ -10,7 +10,7 @@
         - htop
         - tmux
         - vim-nox
-        - conky
+        - conky-all
 
   - name: copy wallpaper file
     copy:
